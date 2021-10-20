@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/drawable/ic_baseline_calculate_24.xml" value="0.215625" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/layout/activity_calculation2.xml" value="0.14990942028985507" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/layout/activity_home2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/layout/activity_main.xml" value="0.14990942028985507" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/Users/Sunita Pudasaini/Desktop/App/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

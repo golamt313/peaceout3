@@ -36,13 +36,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
-        <activity
-            android:name=".Calculation"
-            android:label="@string/title_activity_calculation"
-            android:theme="@style/Theme.Splash.NoActionBar" />
-        <activity
-            android:name=".Home"
-            android:label="@string/title_activity_home_page" />
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
