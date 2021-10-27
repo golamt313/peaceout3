@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923137774150",
+    "project_id": "indigo-kiln-311214",
+    "storage_bucket": "indigo-kiln-311214.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923137774150:android:e9cc30ea68a045f04a7047",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923137774150-o1ll2dm2btck3lckg8l86orvvl8mhl2e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF6TCeHn6qX_AX9F2jGJRBDWLTIjNywmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923137774150-o1ll2dm2btck3lckg8l86orvvl8mhl2e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
