@@ -1,4 +1,4 @@
-package com.example.splash;
+package com.example.application;
 
 
 import androidx.appcompat.app.AppCompatActivity;
