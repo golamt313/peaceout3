@@ -40,6 +40,7 @@ dependencies {
 
     // Declare the dependencies for the desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
