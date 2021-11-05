@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <androidx.constraintlayout.widget.ConstraintLayout
-    tools:context=".MainActivity"
+    tools:context=".LoadingActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -21,7 +21,7 @@
         android:layout_marginTop="338dp"
         android:layout_marginLeft="142dp"
         android:layout_marginStart="142dp"
-        android:id="@+id/googleSignInBtn"/>
+        android:id="@+id/google_signIn"/>
 
 
     <Button android:layout_height="wrap_content"
