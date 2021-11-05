@@ -10,7 +10,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+<<<<<<< Updated upstream:App/app/src/main/java/com/example/application/LoadingActivity.java
 public class LoadingActivity extends AppCompatActivity {
+=======
+public class MainActivity extends AppCompatActivity {
+>>>>>>> Stashed changes:App/app/src/main/java/com/example/application/MainActivity.java
     private TextView tv ;
     private ImageView iv;
 
@@ -23,7 +27,11 @@ public class LoadingActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
         tv.startAnimation(anim);
         iv.startAnimation(anim);
+<<<<<<< Updated upstream:App/app/src/main/java/com/example/application/LoadingActivity.java
         final Intent i = new Intent(this, LoginActivity.class);
+=======
+        final Intent intent = new Intent(this, LoginActivity.class);
+>>>>>>> Stashed changes:App/app/src/main/java/com/example/application/MainActivity.java
         Thread timer =new Thread(){
             public void run () {
                 try {
@@ -33,7 +41,7 @@ public class LoadingActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    startActivity(i);
+                    startActivity(intent);
                     finish();
                 }
             }

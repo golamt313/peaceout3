@@ -1,5 +1,9 @@
 package com.example.application;
 
+<<<<<<< Updated upstream
+=======
+import androidx.appcompat.app.AppCompatActivity;
+>>>>>>> Stashed changes
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +24,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
+<<<<<<< Updated upstream
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,6 +37,17 @@ public class LoginActivity extends AppCompatActivity {
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
+=======
+public class LoginActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        final ImageView signInBtn = findViewById(R.id.signInBtn);
+
+        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+>>>>>>> Stashed changes
                 .requestEmail()
                 .build();
 
@@ -83,4 +99,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes

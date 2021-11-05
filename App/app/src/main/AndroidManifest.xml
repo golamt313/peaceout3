@@ -7,8 +7,13 @@
 
     <activity android:name=".HomeActivity" android:label="@string/title_activity_home_page"/>
 
+    <activity android:name=".LoginActivity"/>
 
+<<<<<<< Updated upstream
     <activity android:name=".LoadingActivity">
+=======
+    <activity android:name=".MainActivity"/>
+>>>>>>> Stashed changes
 
 
     <intent-filter>
@@ -18,8 +23,6 @@
     <category android:name="android.intent.category.LAUNCHER"/>
 
 </intent-filter>
-
-</activity>
 
 </application>
 
