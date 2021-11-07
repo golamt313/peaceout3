@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
         tv.startAnimation(anim);
         iv.startAnimation(anim);
-        final Intent i = new Intent(this,Home.class);
+        final Intent i = new Intent(this,Login.class);
         Thread timer =new Thread(){
             public void run () {
                 try {
