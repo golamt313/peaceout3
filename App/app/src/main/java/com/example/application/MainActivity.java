@@ -1,14 +1,19 @@
-package com.example.splash;
+package com.example.application;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.gms.auth.api.signin.*;
+import com.google.android.gms.common.SignInButton;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv ;
@@ -39,5 +44,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         timer.start();
+
     }
+
+
 }

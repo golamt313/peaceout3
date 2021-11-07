@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "241702673929",
+    "project_id": "peaceout-4110",
+    "storage_bucket": "peaceout-4110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241702673929:android:2ed608c09b8a6a933862d8",
+        "android_client_info": {
+          "package_name": "com.example.splash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241702673929-ibecm8lo19nkio809ieesu4ph6g3a3bp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.splash",
+            "certificate_hash": "942dc5635e35b375a9170774c15dfd26ed31ab41"
+          }
+        },
+        {
+          "client_id": "241702673929-t3rm9c3vgpd4eed93kk6n6hpc88i1int.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-WvnNJzwqOwaz5W893a0JhGivprk8TOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241702673929-t3rm9c3vgpd4eed93kk6n6hpc88i1int.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
