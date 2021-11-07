@@ -1,43 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<layout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-    tools:context=".MainActivity"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
 
-    <com.google.android.gms.common.SignInButton
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="338dp"
-        android:layout_marginRight="142dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginTop="338dp"
-        android:layout_marginLeft="142dp"
-        android:layout_marginStart="142dp"
-        android:id="@+id/googleSignInBtn"/>
+        android:src="@drawable/google_icon"
+        android:adjustViewBounds="true"
+        android:layout_marginStart="100dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/signInBtn"
+        android:layout_marginEnd="100dp"/>
 
 
-    <Button android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="218dp"
-        android:layout_marginRight="162dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginStart="161dp"
-        android:id="@+id/sign_out_button"
-        android:visibility="invisible"
-        android:text="Sign Out"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+
+</RelativeLayout>
