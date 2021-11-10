@@ -44,6 +44,7 @@ dependencies {
 
     // Declare the dependencies for the desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'androidx.multidex:multidex:2.0.1'

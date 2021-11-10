@@ -11,6 +11,7 @@ public class MainActivityTest {
     @Before
     public void setUp() {
     }
+
     @After
     public void tearDown() {
 

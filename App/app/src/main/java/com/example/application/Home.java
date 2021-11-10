@@ -1,6 +1,7 @@
 package com.example.application;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.squareup.picasso.Picasso;
 
 public class Home extends AppCompatActivity {
     @Override
@@ -21,9 +23,9 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+        final ImageView image = findViewById(R.id.photoUrl);
         final TextView email = findViewById(R.id.emailId);
         final TextView fullName = findViewById(R.id.fullName);
-        final ImageView profilePicture = findViewById(R.id.profilePicture);
         final AppCompatButton signOutBtn = findViewById(R.id.signOutBtn);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -37,10 +39,10 @@ public class Home extends AppCompatActivity {
         if(googleSignInAccount != null) {
             final String getFullName = googleSignInAccount.getDisplayName();
             final String getEmail = googleSignInAccount.getEmail();
-            final Uri getPhoto = googleSignInAccount.getPhotoUrl();
+            final Uri getPhotoUrl = googleSignInAccount.getPhotoUrl();
             email.setText("Email : " + getEmail);
             fullName.setText("FullName : " + getFullName);
-            profilePicture.setImageURI(getPhoto);
+            Picasso.get().load(getPhotoUrl).into(image);
         }
 
         signOutBtn.setOnClickListener(new View.OnClickListener() {
