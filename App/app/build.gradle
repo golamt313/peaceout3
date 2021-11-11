@@ -7,12 +7,16 @@ plugins {
 apply plugin: 'com.google.gms.google-services'  // Google Services plugin
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
+
+    lintOptions {
+        abortOnError false
+    }
 
     defaultConfig {
         applicationId "com.example.splash"
-        minSdkVersion 16
+        minSdkVersion 30
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
