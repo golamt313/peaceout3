@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        final ImageView signInBtn = findViewById(R.id.signInBtn);
+        final Button signInBtn = findViewById(R.id.signInBtn);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -40,7 +41,7 @@ public class Login extends AppCompatActivity {
 
         // Checks if user is already signed in
         if(googleSignInAccount != null) {
-            startActivity(new Intent(Login.this, Home.class));
+            startActivity(new Intent(Login.this, b_nav.class));
             finish();
         }
 
@@ -74,11 +75,13 @@ public class Login extends AppCompatActivity {
             final String getEmail = account.getEmail();
             final Uri getPhotoUrl = account.getPhotoUrl();
             // Opening Login
-            startActivity(new Intent(Login.this, Home.class));
+            startActivity(new Intent(Login.this, b_nav.class));
             finish();
         } catch (ApiException e) {
             e.printStackTrace();
             Toast.makeText(this,"Failed or Cancelled", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Login.this, b_nav.class));
+            finish();
         }
     }
 }
