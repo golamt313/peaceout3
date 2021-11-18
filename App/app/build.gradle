@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.splash"
+        applicationId "com.example.application"
         minSdkVersion 30
         targetSdkVersion 30
         versionCode 1
