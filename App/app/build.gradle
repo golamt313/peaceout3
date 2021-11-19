@@ -7,7 +7,11 @@ plugins {
 apply plugin: 'com.google.gms.google-services'  // Google Services plugin
 
 android {
+<<<<<<< Updated upstream
     compileSdkVersion 31
+=======
+    compileSdkVersion 30
+>>>>>>> Stashed changes
     buildToolsVersion "30.0.3"
 
     lintOptions {
@@ -15,8 +19,13 @@ android {
     }
 
     defaultConfig {
+<<<<<<< Updated upstream
         applicationId "com.example.splash"
         minSdkVersion 30
+=======
+        applicationId "com.example.application"
+        minSdkVersion 16
+>>>>>>> Stashed changes
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -49,6 +58,7 @@ dependencies {
 
     // Declare the dependencies for the desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
     implementation 'com.google.android.gms:play-services-auth:19.2.0'

@@ -8,6 +8,8 @@ import com.example.application.fragments.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -18,38 +20,37 @@ public class b_nav extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.b_nav);
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
+        startActivity(new Intent(getApplicationContext(), DashboardFragment.class));
+        overridePendingTransition(0, 0);
 
-        //I added this if statement to keep the selected fragment when rotating the device
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new DashboardFragment()).commit();
-        }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.ic_dashboard);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.ic_dashboard:
+                        startActivity(new Intent(getApplicationContext(), DashboardFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.ic_calendar:
+                        startActivity(new Intent(getApplicationContext(), CalendarFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.ic_settings:
+                        startActivity(new Intent(getApplicationContext(), SettingsFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+    }
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    Fragment selectedFragment = null;
-
-                    switch (item.getItemId()) {
-                        case R.id.ic_dashboard:
-                            selectedFragment = new DashboardFragment();
-                            break;
-                        case R.id.ic_calendar:
-                            selectedFragment = new CalendarFragment();
-                            break;
-                        case R.id.ic_settings:
-                            selectedFragment = new SettingsFragment();
-                            break;
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                            selectedFragment).commit();
-
-                    return true;
-                }
-            };
-}

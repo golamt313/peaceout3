@@ -80,7 +80,6 @@ public class Login extends AppCompatActivity {
         } catch (ApiException e) {
             e.printStackTrace();
             Toast.makeText(this,"Failed or Cancelled", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Login.this, b_nav.class));
             finish();
         }
     }
