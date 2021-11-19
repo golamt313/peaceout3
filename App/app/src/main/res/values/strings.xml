@@ -18,7 +18,7 @@
     <string name="example">Example</string>
     <string name="id">ID</string>
     <string name="name">Name</string>
-    <string name="email_address">Email address</string>
+    <string name="email_address">Email</string>
     <string name="sign_out">Sign out</string>
     <string-array name="unit">
         <item>Inch</item>
