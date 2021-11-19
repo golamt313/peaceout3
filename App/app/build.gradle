@@ -16,11 +16,9 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.splash"
-        minSdkVersion 31
         applicationId "com.example.application"
-        minSdkVersion 19
-        targetSdkVersion 31
+        minSdkVersion 30
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
