@@ -6,6 +6,9 @@
     <string name="title_notifications">Setting</string>
     <string name="title_activity_home_page">MainActivity</string>
     <string name="title_activity_calculation">Calculation</string>
+    <string name="title_search">Search</string>
+    <string name="title_favourites">Favorites</string>
+    <string name="title_profile">Profile</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
