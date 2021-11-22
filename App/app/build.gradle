@@ -53,6 +53,7 @@ dependencies {
 
     // Declare the dependencies for the desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
