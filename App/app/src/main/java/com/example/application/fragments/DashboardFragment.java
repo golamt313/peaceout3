@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -58,7 +59,7 @@ public class DashboardFragment extends AppCompatActivity {
         final ImageView image = findViewById(R.id.photoUrl);
         final TextView email = findViewById(R.id.emailId);
         final TextView fullName = findViewById(R.id.fullName);
-        final AppCompatButton signOutBtn = findViewById(R.id.signOutBtn);
+        final Button signOutBtn = findViewById(R.id.signOutBtn);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -73,7 +74,7 @@ public class DashboardFragment extends AppCompatActivity {
             final String getEmail = googleSignInAccount.getEmail();
             final Uri getPhotoUrl = googleSignInAccount.getPhotoUrl();
             email.setText("Email : " + getEmail);
-            fullName.setText("FullName : " + getFullName);
+            fullName.setText("Name : " + getFullName);
             Picasso.get().load(getPhotoUrl).into(image);
         }
 

@@ -1,9 +1,5 @@
 <resources>
-    <string name="app_name">Splash</string>
-    <string name="title_activity_home">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Calculation</string>
-    <string name="title_notifications">Setting</string>
+    <string name="app_name">PeaceOut!</string>
     <string name="title_activity_home_page">MainActivity</string>
     <string name="title_activity_calculation">Calculation</string>
     <!-- Strings used for fragments for navigation -->
@@ -20,11 +16,12 @@
     <string name="name">Name</string>
     <string name="email_address">Email</string>
     <string name="sign_out">Sign out</string>
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
     <string-array name="unit">
         <item>Inch</item>
         <item>Foot</item>
         <item>Meter</item>
 
     </string-array>
-    <string name="title_activity_ps">MainActivity</string>
 </resources>

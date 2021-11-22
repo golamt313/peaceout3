@@ -4,7 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.application.fragments.CalendarFragment">
+    tools:context="com.example.application.fragments.DashboardFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="32dp"
+        android:text="Dashboard"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/photoUrl"
@@ -16,27 +31,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/fullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="20sp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="96dp"
+        android:text="Name"
+        android:textColor="#000000"
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:text="@string/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/photoUrl"
-        android:layout_marginLeft="40dp" />
-
+        app:layout_constraintTop_toBottomOf="@+id/photoUrl" />
 
     <TextView
         android:id="@+id/emailId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:layout_marginTop="4dp"
         android:text="@string/email_address"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/fullName"
         app:layout_constraintTop_toBottomOf="@+id/fullName" />
 
@@ -44,11 +61,11 @@
         android:id="@+id/signOutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="88dp"
         android:text="@string/sign_out"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="@+id/emailId"
         app:layout_constraintTop_toBottomOf="@+id/emailId" />
 
@@ -59,10 +76,23 @@
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/menu" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:text="User Information:"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoUrl" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
