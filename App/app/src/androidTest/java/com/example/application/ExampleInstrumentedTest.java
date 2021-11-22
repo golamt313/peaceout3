@@ -1,6 +1,7 @@
 package com.example.application;
 
 import android.content.Context;
+import android.content.Intent;
 
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -21,6 +22,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.splash", appContext.getPackageName());
+        assertEquals("com.example.application", appContext.getPackageName());
+        //Intent actual = new Intent(getInstrumentation().getTargetContext(), Login.class);
     }
 }
