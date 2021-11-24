@@ -1,2 +1,4 @@
 include ':app'
+include ':services'
 rootProject.name = "Splash"
+include ':services'

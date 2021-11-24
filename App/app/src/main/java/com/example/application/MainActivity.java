@@ -1,27 +1,33 @@
 package com.example.application;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.auth.api.signin.*;
-import com.google.android.gms.common.SignInButton;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.services.api.v1.impl.UserAPIImpl;
+import com.services.api.v1.interf.UserAPI;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv ;
     private ImageView iv;
-
+    private UserAPI api = new UserAPIImpl("https://dummy.restapiexample.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //I had to add this policy in order to get this to work wiht my api.
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.tv) ;
         iv = (ImageView) findViewById(R.id.iv) ;
@@ -43,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
+        try {
+            api.getUserById();
+            Log.d("DataClient", ((UserAPIImpl) api).getUserResponse().body().getData().toString());
+            } catch (IOException e) {
+
+        }
+
+
         timer.start();
 
     }
