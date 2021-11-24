@@ -12,15 +12,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.services.api.v1.impl.UserAPIImpl;
-import com.services.api.v1.interf.UserAPI;
+import com.services.api.v1.impl.UserServiceApiImpl;
+import com.services.api.v1.interf.UserServiceApiInter;
 
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv ;
     private ImageView iv;
-    private UserAPI api = new UserAPIImpl("https://dummy.restapiexample.com/");
+    private UserServiceApiInter api = new UserServiceApiImpl("https://dummy.restapiexample.com/");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         };
 
         try {
-            api.getUserById();
-            Log.d("DataClient", ((UserAPIImpl) api).getUserResponse().body().getData().toString());
+
+            Log.d("DataClient", api.getUserAllUsers().getData().toString());
             } catch (IOException e) {
 
         }

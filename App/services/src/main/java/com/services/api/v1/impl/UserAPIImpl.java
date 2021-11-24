@@ -1,7 +1,7 @@
 package com.services.api.v1.impl;
 
 import com.services.api.v1.RetroCallBack;
-import com.services.api.v1.interf.UserAPI;
+import com.services.api.v1.interf.retro.UserAPI;
 import com.services.api.v1.models.UserRequest;
 
 import java.io.IOException;

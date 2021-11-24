@@ -2,8 +2,8 @@ package com.services.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.services.api.v1.impl.UserAPIImpl;
-import com.services.api.v1.interf.UserAPI;
+import com.services.api.v1.impl.UserServiceApiImpl;
+import com.services.api.v1.interf.UserServiceApiInter;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,9 +18,8 @@ class UserAPIImplTests {
     }
     @Test
     void getUserByIdTest() throws IOException {
-        UserAPI api = new UserAPIImpl("https://dummy.restapiexample.com/");
-        api.getUserById();
-        ((UserAPIImpl) api).getUserResponse();
-        assertEquals(2, 2);
+        UserServiceApiInter api = new UserServiceApiImpl("https://dummy.restapiexample.com/");
+        api.getUserAllUsers().getData();
+        assertEquals(2,2);
     }
 }
