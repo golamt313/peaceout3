@@ -30,9 +30,8 @@ public class AuthenicationServiceImpl implements AuthenicationServiceInter {
     }
 
     @Override
-    public boolean validate(String token) throws IOException {
-        AuthRequest userRequest = new AuthRequest();
-        userRequest.setToken(token);
-        return this.authAPI.validate(userRequest).execute().code() == 200 ? true :false ;
+    public boolean validate(Token token) throws IOException {
+        int code = this.authAPI.validate(token).execute().code();
+        return code == 200 ? true :false ;
     }
 }

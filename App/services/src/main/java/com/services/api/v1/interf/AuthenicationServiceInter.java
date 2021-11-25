@@ -7,5 +7,5 @@ import java.io.IOException;
 
 public interface AuthenicationServiceInter {
     Token login(AuthRequest userRequest) throws IOException;
-    boolean validate(String Token) throws IOException;
+    boolean validate(Token token) throws IOException;
 }
