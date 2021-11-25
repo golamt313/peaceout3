@@ -8,4 +8,5 @@ import java.io.IOException;
 public interface AuthenicationServiceInter {
     Token login(AuthRequest userRequest) throws IOException;
     boolean validate(Token token) throws IOException;
+    Object getsomething(Token token) throws IOException;
 }

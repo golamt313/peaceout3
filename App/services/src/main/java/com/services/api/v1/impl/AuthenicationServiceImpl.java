@@ -34,4 +34,9 @@ public class AuthenicationServiceImpl implements AuthenicationServiceInter {
         int code = this.authAPI.validate(token).execute().code();
         return code == 200 ? true :false ;
     }
+
+    @Override
+    public Object getsomething(Token token) throws IOException {
+        return this.authAPI.getsomething(token.getJwtToken()).execute().body();
+    }
 }

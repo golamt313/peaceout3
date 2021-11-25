@@ -5,6 +5,8 @@ import com.services.api.v1.models.Token;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface AuthAPI {
@@ -12,4 +14,6 @@ public interface AuthAPI {
     Call<AuthRequest> login(@Body AuthRequest userRequest);
     @POST("api/auth/validate")
     Call<AuthRequest> validate(@Body Token token);
+    @GET("")
+    Call<AuthRequest> getsomething(@Header("token") String token);
 }
