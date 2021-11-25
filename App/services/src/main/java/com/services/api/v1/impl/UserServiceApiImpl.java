@@ -25,6 +25,7 @@ public class UserServiceApiImpl implements UserServiceApiInter {
 
     @Override
     public UserRequest getUserAllUsers() throws IOException {
+
         return  this.userAPI.getUserById().execute().body();
     }
 

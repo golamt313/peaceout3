@@ -18,6 +18,7 @@ public class UserAPIImpl implements UserAPI {
     private Response<UserRequest> userResponse;
 
     public Response<UserRequest> getUserResponse() {
+
         return userResponse;
     }
 
