@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "715043539097",
+    "firebase_url": "https://peaceout-332615-default-rtdb.firebaseio.com",
+    "project_id": "peaceout-332615",
+    "storage_bucket": "peaceout-332615.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715043539097:android:84db2d5eb1815d9af79008",
+        "android_client_info": {
+          "package_name": "com.example.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715043539097-0vm0om02g070kapbup4bgkhg4oq2t2vp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.application",
+            "certificate_hash": "b38693c33aa74ab3536243fd9ac28460a8451be1"
+          }
+        },
+        {
+          "client_id": "715043539097-nglv5f2e06i54793vh5oc9akoa3a70ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.application",
+            "certificate_hash": "942dc5635e35b375a9170774c15dfd26ed31ab41"
+          }
+        },
+        {
+          "client_id": "715043539097-76bmkrcv5sq1r7ftc5vmvkll9d9khi0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc704YzshSUoLB6Cj6p9SSua6__BoklWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715043539097-76bmkrcv5sq1r7ftc5vmvkll9d9khi0v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
