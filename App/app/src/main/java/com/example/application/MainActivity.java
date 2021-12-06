@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.tv) ;
         iv = findViewById(R.id.iv) ;
-        tv.animate().translationY(-1600).setDuration(50).setStartDelay(4000);
-        tv.animate().translationY(1400).setDuration(50).setStartDelay(4000);
+        tv.animate().translationY(-1600).setDuration(50).setStartDelay(2000);
+        tv.animate().translationY(1400).setDuration(50).setStartDelay(2000);
         final Intent i = new Intent(this,Login.class);
         Thread timer =new Thread(){
             public void run () {

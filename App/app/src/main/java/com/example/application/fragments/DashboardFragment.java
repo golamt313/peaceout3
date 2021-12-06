@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -51,7 +52,9 @@ public class DashboardFragment extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.ic_dashboard);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
@@ -122,8 +125,7 @@ public class DashboardFragment extends AppCompatActivity {
         setEventAdpater();
     }
 
-    private void setEventAdpater()
-    {
+    private void setEventAdpater() {
         ArrayList<Event> dailyEvents = Event.eventsForDate(LocalDate.now());
         int itemCount = dailyEvents.size();
         String str1 = Integer.toString(itemCount);
@@ -131,6 +133,13 @@ public class DashboardFragment extends AppCompatActivity {
         textViewevent.setText(str1);
         EventAdapter eventAdapter = new EventAdapter(getApplicationContext(), dailyEvents);
         eventListView.setAdapter(eventAdapter);
+        eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(DashboardFragment.this,EventEditActivity.class));
+            }
+        });
+
     }
 
 
