@@ -46,6 +46,16 @@ android {
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    implementation('com.google.api-client:google-api-client-android:1.23.0') {
+        exclude group: 'org.apache.httpcomponents'
+    }
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    implementation 'com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'
+
+
+
     // Import the Firebase BoM
     implementation project(":services")
     implementation 'com.squareup.retrofit2:retrofit:2.1.0'
@@ -56,6 +66,7 @@ dependencies {
 
     // Declare the dependencies for the desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.api-client:google-api-client:1.31.5'
     androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.squareup.picasso:picasso:2.71828'
@@ -69,7 +80,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
     implementation 'com.google.firebase:firebase-auth:21.0.1'
-    implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'

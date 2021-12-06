@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.GetTokenResult;
 
 
 public class Login extends AppCompatActivity {
@@ -31,7 +32,6 @@ public class Login extends AppCompatActivity {
         final Button signInBtn = findViewById(R.id.signInBtn);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
 
@@ -53,6 +53,7 @@ public class Login extends AppCompatActivity {
                 handleSignInTask(task);
             }
         });
+
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +64,8 @@ public class Login extends AppCompatActivity {
                 activityResultLauncher.launch(signInIntent);
             }
         });
+
+        
     }
 
     private void handleSignInTask(Task<GoogleSignInAccount> task) {
