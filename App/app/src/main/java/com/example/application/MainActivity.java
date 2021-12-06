@@ -5,15 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.api.services.calendar.model.Event;
 import com.services.api.v1.impl.AuthenicationServiceImpl;
+import com.services.api.v1.impl.GoogleCalendarApiImpl;
 import com.services.api.v1.impl.UserServiceApiImpl;
 import com.services.api.v1.interf.AuthenicationServiceInter;
 import com.services.api.v1.interf.UserServiceApiInter;
@@ -21,6 +20,8 @@ import com.services.api.v1.models.AuthRequest;
 import com.services.api.v1.models.Token;
 
 import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv ;
@@ -67,8 +68,14 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {
             Log.e("Dataclient", e.toString());
         }
+        try {
 
-
+            List<Event> events = GoogleCalendarApiImpl.getCalendar(12, 2021);
+        } catch (GeneralSecurityException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         timer.start();
 
     }

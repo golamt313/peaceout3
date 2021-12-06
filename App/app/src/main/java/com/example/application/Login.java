@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -20,6 +19,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.api.services.calendar.model.Event;
+import com.services.api.v1.impl.GoogleCalendarApiImpl;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.util.List;
 
 
 public class Login extends AppCompatActivity {
@@ -39,8 +44,17 @@ public class Login extends AppCompatActivity {
 
         GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(this);
 
+
+
         // Checks if user is already signed in
         if(googleSignInAccount != null) {
+            try {
+                List<Event> test = GoogleCalendarApiImpl.getCalendar(12, 2012);
+            } catch (GeneralSecurityException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             startActivity(new Intent(Login.this, b_nav.class));
             finish();
         }
