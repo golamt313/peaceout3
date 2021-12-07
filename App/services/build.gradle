@@ -16,9 +16,17 @@ dependencies {
     implementation 'com.google.android.datatransport:transport-api:2.2.1'
     testImplementation 'org.testng:testng:6.9.6'
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
-    implementation 'com.google.api-client:google-api-client:1.23.0'
-    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
-    implementation 'com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'
+
+    implementation ('com.google.api-client:google-api-client:1.23.0'){
+        exclude group: 'com.google.guava'
+    }
+
+    implementation ('com.google.oauth-client:google-oauth-client-jetty:1.23.0'){
+        exclude group: 'com.google.guava'
+    }
+    implementation ('com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'){
+        exclude group: 'com.google.guava'
+    }
 }
 
 test {
