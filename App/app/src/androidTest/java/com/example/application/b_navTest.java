@@ -1,10 +1,17 @@
 package com.example.application;
 
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.junit.Assert.*;
 
+import androidx.lifecycle.Lifecycle;
+import androidx.test.core.app.ActivityScenario;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith()
+/*
 import android.content.Context;
 import android.content.Intent;
 
@@ -25,10 +32,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.junit.MockitoRule;*/
 
 public class b_navTest {
-    @Mock b_nav test;
+    /*@Mock b_nav test;
     public Context mockcontext;
     //test.startActivity(new Intent(test.getApplicationContext(), DashboardFragment.class));
 
@@ -46,23 +53,48 @@ public class b_navTest {
     @After
     public void tearDown() throws Exception {
         test = null;
+    }*/
+    @Test
+    public void TestCalendar()
+    {
+
+        try(ActivityScenario<b_nav> b_navActivityScenario = ActivityScenario.launch(b_nav.class)) {
+            onView(withId(R.id.ic_calendar)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
+        }
+
     }
     @Test
-    public void Test()
+    public void TestDashboardCreated()
     {
-        Intent intentD = new Intent(test, DashboardFragment.class);
-        Assert.assertNotNull(intentD);
-        ArgumentCaptor<Intent> argument = ArgumentCaptor.forClass(Intent.class);
+        try(ActivityScenario<b_nav> b_navActivityScenario = ActivityScenario.launch(b_nav.class)) {
+            onView(withId(R.id.ic_dashboard)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
+        }
 
-       //Mockito.verify(mockcontext,test.startActivity(new Intent(test, DashboardFragment.class)));
+    }
+    @Test
+    public void TestSettingsCreated()
+    {
+        try(ActivityScenario<b_nav> b_navActivityScenario = ActivityScenario.launch(b_nav.class)) {
+            onView(withId(R.id.ic_settings)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
+        }
 
-        test.startActivity(intentD);
-        ;
-        test.startActivity(new Intent(test, CalendarFragment.class));
-        test.startActivity(new Intent(test, SettingsFragment.class));
-        Assert.assertNotNull(test);
+    }
 
+    @Test
+    public void TestBringItTogether()
+    {
+        try(ActivityScenario<b_nav> b_navActivityScenario = ActivityScenario.launch(b_nav.class)) {
+            onView(withId(R.id.ic_settings)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
+            onView(withId(R.id.ic_calendar)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
+            onView(withId(R.id.ic_dashboard)).perform(click());
+            assertEquals(b_navActivityScenario.getState(), Lifecycle.State.CREATED);
 
+        }
 
     }
 }
