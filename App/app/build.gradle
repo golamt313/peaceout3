@@ -102,4 +102,12 @@ dependencies {
     //testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation 'android.arch.core:core-testing:1.0.0-alpha3'
     testImplementation 'org.robolectric:robolectric:3.6.1'
+
+    testImplementation'org.robolectric:shadows-support-v4:3.0'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    def nav_version = "2.3.5"
+
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
 }
