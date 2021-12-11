@@ -111,4 +111,7 @@ dependencies {
 
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'org.hamcrest:hamcrest-library:2.2'
+
 }
