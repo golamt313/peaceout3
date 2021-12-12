@@ -13,13 +13,12 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.airbnb.lottie.LottieAnimationView
+        <ImageView
             android:id="@+id/iv"
-            app:lottie_autoPlay="true"
             android:layout_width="184dp"
             android:layout_height="140dp"
             android:layout_gravity="center"
-            app:lottie_rawRes="@raw/bell" />
+            android:src="@drawable/buildinglogo" />
 
         <TextView
             android:id="@+id/tv"
