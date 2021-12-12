@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/pi">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:id="@+id/userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:fontFamily="@font/fjord_one"
+                android:gravity="center"
+                android:text="Account"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <TextView
+                android:id="@+id/signout"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/userinfo"
+                android:fontFamily="@font/audiowide"
+                android:text="Signout"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <Button
+                android:id="@+id/sout"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/userinfo"
+                android:layout_toRightOf="@+id/signout"
+                android:drawableLeft="@drawable/ic_google"
+                android:text="signout"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <TextView
+                android:id="@+id/switchaccount"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/signout"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Switch Account"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <Button
+                android:id="@+id/saccount"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/sout"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_google"
+                android:layout_toRightOf="@+id/switchaccount"
+                android:text="Switch Account"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <TextView
+                android:id="@+id/adduser"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/switchaccount"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Add User"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+            <Button
+                android:id="@+id/auser"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/saccount"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_google"
+                android:layout_toRightOf="@+id/adduser"
+                android:text="Add User"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:layout_editor_absoluteX="126dp"
+                tools:layout_editor_absoluteY="131dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

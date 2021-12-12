@@ -3,13 +3,16 @@ package com.example.application.fragments;
 import static com.example.application.fragments.CalendarUtils.daysInWeekArray;
 import static com.example.application.fragments.CalendarUtils.monthYearFromDate;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +25,7 @@ import static com.example.application.fragments.CalendarUtils.daysInWeekArray;
 import static com.example.application.fragments.CalendarUtils.monthYearFromDate;
 
 import com.example.application.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class WeekViewActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
@@ -36,6 +40,33 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
         setContentView(R.layout.activity_week_view);
         initWidgets();
         setWeekView();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.ic_calendar);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.ic_dashboard:
+                        startActivity(new Intent(getApplicationContext(), DashboardFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.ic_calendar:
+                        startActivity(new Intent(getApplicationContext(), CalendarFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    case R.id.ic_settings:
+                        startActivity(new Intent(getApplicationContext(), SettingsFragment.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
     }
 
     private void initWidgets()
@@ -90,6 +121,12 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
         ArrayList<Event> dailyEvents = Event.eventsForDate(CalendarUtils.selectedDate);
         EventAdapter eventAdapter = new EventAdapter(getApplicationContext(), dailyEvents);
         eventListView.setAdapter(eventAdapter);
+        eventListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(WeekViewActivity.this,EventEditActivity.class));
+            }
+        });
     }
 
     public void newEventAction(View view)
