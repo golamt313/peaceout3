@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/pi"
     tools:context="com.example.application.fragments.CalendarFragment">
 
     <Button
@@ -14,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Weekly"
-        android:textColor="@color/white"
+        android:textColor="@color/blue"
         android:background="@null"
         android:textStyle="bold"
         android:onClick="weeklyAction"
@@ -26,18 +25,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="20dp">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@null"
-            android:onClick="previousMonthAction"
             android:text="@string/back"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/blue"
+            android:background="@null"
+            android:textStyle="bold"
+            android:onClick="previousMonthAction"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/monthYearTV"
@@ -47,14 +46,14 @@
             android:text="Feb 2021"
             android:textSize="20sp"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/forward"
-            android:textColor="@color/white"
+            android:textColor="@color/blue"
             android:background="@null"
             android:textStyle="bold"
             android:onClick="nextMonthAction"
@@ -137,7 +136,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="526dp" />
+        android:layout_height="506dp" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

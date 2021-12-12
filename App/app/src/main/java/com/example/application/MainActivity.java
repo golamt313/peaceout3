@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.services.api.v1.impl.AuthenicationServiceImpl;
 import com.services.api.v1.impl.UserServiceApiImpl;
 import com.services.api.v1.interf.AuthenicationServiceInter;
@@ -24,7 +23,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tv ;
-    LottieAnimationView iv;
+    private ImageView iv;
     private UserServiceApiInter api = new UserServiceApiImpl("https://dummy.restapiexample.com/");
     private AuthenicationServiceInter authapi = new AuthenicationServiceImpl("http://10.0.2.2:3000/");
 
@@ -37,14 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         tv = (TextView) findViewById(R.id.tv) ;
-        iv = findViewById(R.id.iv) ;
-        tv.animate().translationY(-1600).setDuration(50).setStartDelay(2000);
-        tv.animate().translationY(1400).setDuration(50).setStartDelay(2000);
+        iv = (ImageView) findViewById(R.id.iv) ;
+        Animation anim = AnimationUtils.loadAnimation(this,R.anim.mytransition);
+        tv.startAnimation(anim);
+        iv.startAnimation(anim);
         final Intent i = new Intent(this,Login.class);
         Thread timer =new Thread(){
             public void run () {
                 try {
-                    sleep(2000);
+                    sleep(5000);
                 }
                 catch (InterruptedException e){
                     e.printStackTrace();
