@@ -91,9 +91,10 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
-
+    implementation 'com.airbnb.android:lottie:3.4.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.cardview:cardview:1.0.0"
 
     //Navigation View Dependency
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
@@ -102,15 +103,4 @@ dependencies {
     //testImplementation "androidx.arch.core:core-testing:2.1.0"
     testImplementation 'android.arch.core:core-testing:1.0.0-alpha3'
     testImplementation 'org.robolectric:robolectric:3.6.1'
-
-    testImplementation'org.robolectric:shadows-support-v4:3.0'
-    testImplementation 'org.mockito:mockito-core:1.10.19'
-
-    def nav_version = "2.3.5"
-
-    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
-
-    testImplementation 'org.hamcrest:hamcrest:2.2'
-    testImplementation 'org.hamcrest:hamcrest-library:2.2'
-
 }
