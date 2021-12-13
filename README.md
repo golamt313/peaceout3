@@ -1,4 +1,4 @@
-# peaceout3
+# PeaceOUT
 # Team Members:
  Fatema Jui;
  Golam Tahsin;
